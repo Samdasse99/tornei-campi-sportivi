@@ -13,6 +13,7 @@ Si vuole realizzare un’applicazione web e mobile che faciliti l’incontro di 
 - indicare il proprio livello atletico e tecnico
 - inicare in quali ruoli si è disponibili a giocare
 - consultare i risultati di partite passate
+
 I gestori dei centri sportivi potranno:
 - mettere a disposizione diversi campi
 
