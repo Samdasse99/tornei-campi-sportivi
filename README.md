@@ -16,6 +16,7 @@ Si vuole realizzare un’applicazione web e mobile che faciliti l’incontro di 
 
 I gestori dei centri sportivi potranno:
 - mettere a disposizione diversi campi
+- stabilire che tipi di sconto poter applicare
 
 S’intende implementare meccanismi che promuovano il rispetto degli impegni presi sia nei confronti dei centri sportivi che degli altri utenti.
 
