@@ -29,3 +29,4 @@ Esiste un’applicazione simile (Fubles), che però è limitata al calcio. Si vu
 - possibilità di pagare direttamente con carta di credito (e per i gestori di indicare le proprie coordinate bancarie)
 - possibilità di indicare utenti con cui si preferisce non giocare
 - pagina con eventuali news sull’applicazione ed eventi sportivi
+- gallerie di foto
