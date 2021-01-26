@@ -37,6 +37,9 @@ public class Giocatore {
 	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
 	private List<Gruppo> gruppi;
 	
-	@OneToMany(mappedBy = "giocatore", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-	private List<Prenotazione> prenotazioni;
+	@OneToMany(mappedBy = "creatore", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
+	private List<Gruppo> gruppiCreati;
+	
+	@OneToMany(mappedBy = "referente", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
+	private List<Slot> slots;
 }
