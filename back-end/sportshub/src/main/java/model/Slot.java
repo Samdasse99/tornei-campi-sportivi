@@ -40,4 +40,76 @@ public class Slot {
 	
 	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
 	private Gruppo gruppo;
+
+	public Integer getIdSlot() {
+		return idSlot;
+	}
+
+	public void setIdSlot(Integer idSlot) {
+		this.idSlot = idSlot;
+	}
+
+	public Date getDataOraInizio() {
+		return dataOraInizio;
+	}
+
+	public void setDataOraInizio(Date dataOraInizio) {
+		this.dataOraInizio = dataOraInizio;
+	}
+
+	public Date getDataOraFine() {
+		return dataOraFine;
+	}
+
+	public void setDataOraFine(Date dataOraFine) {
+		this.dataOraFine = dataOraFine;
+	}
+
+	public BigDecimal getPrezzo() {
+		return prezzo;
+	}
+
+	public void setPrezzo(BigDecimal prezzo) {
+		this.prezzo = prezzo;
+	}
+
+	public Integer getScontoPercent() {
+		return scontoPercent;
+	}
+
+	public void setScontoPercent(Integer scontoPercent) {
+		this.scontoPercent = scontoPercent;
+	}
+
+	public Boolean getScontoRiscattato() {
+		return scontoRiscattato;
+	}
+
+	public void setScontoRiscattato(Boolean scontoRiscattato) {
+		this.scontoRiscattato = scontoRiscattato;
+	}
+
+	public Campo getCampo() {
+		return campo;
+	}
+
+	public void setCampo(Campo campo) {
+		this.campo = campo;
+	}
+
+	public Giocatore getReferente() {
+		return referente;
+	}
+
+	public void setReferente(Giocatore referente) {
+		this.referente = referente;
+	}
+
+	public Gruppo getGruppo() {
+		return gruppo;
+	}
+
+	public void setGruppo(Gruppo gruppo) {
+		this.gruppo = gruppo;
+	}
 }

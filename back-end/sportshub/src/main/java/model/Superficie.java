@@ -22,4 +22,28 @@ public class Superficie {
 	
 	@OneToMany(mappedBy = "superficie", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
 	private List<Campo> campi;
+
+	public Integer getIdSuperficie() {
+		return idSuperficie;
+	}
+
+	public void setIdSuperficie(Integer idSuperficie) {
+		this.idSuperficie = idSuperficie;
+	}
+
+	public String getMateriale() {
+		return materiale;
+	}
+
+	public void setMateriale(String materiale) {
+		this.materiale = materiale;
+	}
+
+	public List<Campo> getCampi() {
+		return campi;
+	}
+
+	public void setCampi(List<Campo> campi) {
+		this.campi = campi;
+	}
 }

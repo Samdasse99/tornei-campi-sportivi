@@ -22,4 +22,28 @@ public class Sport {
 	
 	@ManyToMany(mappedBy = "sports", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
 	private List<Campo> campi;
+
+	public Integer getIdSport() {
+		return idSport;
+	}
+
+	public void setIdSport(Integer idSport) {
+		this.idSport = idSport;
+	}
+
+	public String getNomeSport() {
+		return nomeSport;
+	}
+
+	public void setNomeSport(String nomeSport) {
+		this.nomeSport = nomeSport;
+	}
+
+	public List<Campo> getCampi() {
+		return campi;
+	}
+
+	public void setCampi(List<Campo> campi) {
+		this.campi = campi;
+	}
 }
