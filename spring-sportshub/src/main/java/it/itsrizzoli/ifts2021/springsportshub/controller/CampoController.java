@@ -1,4 +1,4 @@
-package it.itsrizzoli.ifts2021.springsportshub.controller;
+	package it.itsrizzoli.ifts2021.springsportshub.controller;
 
 import java.util.List;
 
