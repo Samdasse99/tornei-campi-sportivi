@@ -9,6 +9,14 @@
  
 }
 
+.box-1{
+  position:fixed;
+  left:350px;
+  width:300px;
+  background-color:#FFE479;
+  border:1px solid #000;
+  font-size:1em;
+  }
 
 input[type=text], input[type=password] {
   width: 100%;
