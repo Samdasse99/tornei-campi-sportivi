@@ -1,5 +1,6 @@
 package it.itsrizzoli.ifts2021.springsportshub.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -28,7 +29,7 @@ public class Superficie {
 	private String materiale;
 	
 	@OneToMany(mappedBy = "superficie", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-	private List<Campo> campi;
+	private List<Campo> campi = new ArrayList<Campo>();
 
 	public Integer getIdSuperficie() {
 		return idSuperficie;

@@ -1,5 +1,6 @@
 package it.itsrizzoli.ifts2021.springsportshub.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -39,10 +40,20 @@ public class Campo {
 	private Superficie superficie;
 	
 	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-	private List<Sport> sports;
+	private List<Sport> sports = new ArrayList<Sport>();
 	
 	@OneToMany(mappedBy = "campo", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-	private List<Slot> slots;
+	private List<Slot> slots = new ArrayList<Slot>();
+	
+	public void addSport(Sport s) {
+		this.sports.add(s);
+		s.getCampi().add(this);
+	}
+	
+	public void removeSport(Sport s) {
+		this.sports.remove(s);
+		s.getCampi().remove(this);
+	}
 
 	public Integer getIdCampo() {
 		return idCampo;

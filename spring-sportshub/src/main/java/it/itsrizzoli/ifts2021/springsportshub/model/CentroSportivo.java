@@ -1,6 +1,7 @@
 package it.itsrizzoli.ifts2021.springsportshub.model;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -39,10 +40,10 @@ public class CentroSportivo {
 	private String citta;
 	
 	@Column(precision = 8, scale = 2)
-	private BigDecimal soglia_coupon;
+	private BigDecimal sogliaCoupon;
 	
 	@OneToMany(mappedBy = "centroSportivo", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-	private List<Campo> campi;
+	private List<Campo> campi = new ArrayList<Campo>();
 
 	public String getEmail() {
 		return email;
@@ -92,12 +93,12 @@ public class CentroSportivo {
 		this.citta = citta;
 	}
 
-	public BigDecimal getSoglia_coupon() {
-		return soglia_coupon;
+	public BigDecimal getSogliaCoupon() {
+		return sogliaCoupon;
 	}
 
-	public void setSoglia_coupon(BigDecimal soglia_coupon) {
-		this.soglia_coupon = soglia_coupon;
+	public void setSogliaCoupon(BigDecimal sogliaCoupon) {
+		this.sogliaCoupon = sogliaCoupon;
 	}
 
 	public List<Campo> getCampi() {

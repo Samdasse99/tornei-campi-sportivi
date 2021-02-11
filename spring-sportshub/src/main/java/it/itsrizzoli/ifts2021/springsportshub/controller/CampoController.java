@@ -24,6 +24,6 @@ public class CampoController {
 	
 	@GetMapping("/campi/{idCampo}")
 	public Campo byId(@PathVariable Integer idCampo) {
-		return repository.findById(idCampo).orElseThrow(() -> new NotFoundException());
+		return repository.findById(idCampo).orElseThrow(() -> new NotFoundException(idCampo));
 	}
 }

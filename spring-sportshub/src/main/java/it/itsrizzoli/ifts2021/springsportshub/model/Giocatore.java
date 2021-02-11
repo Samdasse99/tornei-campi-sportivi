@@ -1,5 +1,6 @@
 package it.itsrizzoli.ifts2021.springsportshub.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -42,14 +43,24 @@ public class Giocatore {
 	private String citta;
 	
 	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-	private List<Gruppo> gruppi;
+	private List<Gruppo> gruppi = new ArrayList<Gruppo>();
 	
 	@OneToMany(mappedBy = "creatore", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-	private List<Gruppo> gruppiCreati;
+	private List<Gruppo> gruppiCreati = new ArrayList<Gruppo>();
 	
 	@OneToMany(mappedBy = "referente", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-	private List<Slot> slots;
+	private List<Slot> slots = new ArrayList<Slot>();
 
+	public void addGruppo(Gruppo g) {
+		this.gruppi.add(g);
+		g.getGiocatori().add(this);
+	}
+	
+	public void removeGruppo(Gruppo g) {
+		this.gruppi.remove(g);
+		g.getGiocatori().remove(this);
+	}
+	
 	public String getEmail() {
 		return email;
 	}

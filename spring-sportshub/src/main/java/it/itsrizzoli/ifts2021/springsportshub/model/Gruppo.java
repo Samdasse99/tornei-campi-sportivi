@@ -1,5 +1,6 @@
 package it.itsrizzoli.ifts2021.springsportshub.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -36,8 +37,18 @@ public class Gruppo {
 	private Giocatore creatore;
 	
 	@OneToMany(mappedBy = "gruppo", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-	private List<Slot> slots;
+	private List<Slot> slots = new ArrayList<Slot>();
 
+	public void addGiocatore(Giocatore g) {
+		this.giocatori.add(g);
+		g.getGruppi().add(this);
+	}
+	
+	public void removeGiocatore(Giocatore g) {
+		this.giocatori.remove(g);
+		g.getGruppi().remove(this);
+	}
+	
 	public Integer getIdGruppo() {
 		return idGruppo;
 	}
