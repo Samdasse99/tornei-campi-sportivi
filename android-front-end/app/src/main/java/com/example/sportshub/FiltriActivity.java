@@ -8,7 +8,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-public class filtri extends Activity {
+public class FiltriActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

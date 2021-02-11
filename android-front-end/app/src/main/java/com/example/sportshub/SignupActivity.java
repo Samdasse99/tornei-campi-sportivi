@@ -1,14 +1,14 @@
 package com.example.sportshub;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class DatiUtente extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class SignupActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dati_utente);
-    }
+        setContentView(R.layout.activity_signup);
+}
 }
