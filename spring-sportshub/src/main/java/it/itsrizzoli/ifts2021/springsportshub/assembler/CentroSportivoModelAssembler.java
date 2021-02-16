@@ -19,4 +19,5 @@ public class CentroSportivoModelAssembler implements RepresentationModelAssemble
 				linkTo(methodOn(CentroSportivoController.class).one(centroSportivo.getEmail())).withSelfRel(),
 				linkTo(methodOn(CentroSportivoController.class).all()).withRel("centri-sportivi"));
 	}
+
 }

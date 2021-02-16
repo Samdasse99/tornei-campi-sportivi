@@ -84,5 +84,13 @@ public class CampoController {
 		repository.deleteById(idCampo);
 		return ResponseEntity.noContent().build();
 	}
-
+	
+	@GetMapping("centri-sportivi/{email}/campi")
+	public ResponseEntity<CollectionModel<EntityModel<Campo>>> allInCentro(@PathVariable String email) {
+		List<EntityModel<Campo>> campi = repository.findByCentroSportivoId(email).stream()
+				.map(assembler::toModel)
+				.collect(Collectors.toList());
+		return ResponseEntity.ok(CollectionModel.of(campi,
+				linkTo(methodOn(CampoController.class).allInCentro(email)).withSelfRel()));
+	}
 }
