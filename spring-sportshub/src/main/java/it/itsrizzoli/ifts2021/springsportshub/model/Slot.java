@@ -9,7 +9,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
@@ -33,7 +32,6 @@ public class Slot {
 	@Column(nullable = false)
 	private Boolean scontoRiscattato;
 	
-	@JoinColumn(nullable = false)
 	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
 	private Campo campo;
 	
