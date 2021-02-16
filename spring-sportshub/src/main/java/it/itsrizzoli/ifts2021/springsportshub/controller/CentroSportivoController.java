@@ -33,12 +33,12 @@ public class CentroSportivoController {
 	private CentroSportivoModelAssembler assembler;
 	
 	@GetMapping("/centri-sportivi")
-	public CollectionModel<EntityModel<CentroSportivo>> all() {
+	public ResponseEntity<CollectionModel<EntityModel<CentroSportivo>>> all() {
 		List<EntityModel<CentroSportivo>> centriSportivi = repository.findAll().stream()
 				.map(assembler::toModel)
 				.collect(Collectors.toList());
-		return CollectionModel.of(centriSportivi,
-				linkTo(methodOn(CentroSportivoController.class).all()).withSelfRel());
+		return ResponseEntity.ok(CollectionModel.of(centriSportivi,
+				linkTo(methodOn(CentroSportivoController.class).all()).withSelfRel()));
 	}
 	
 	@PostMapping("/centri-sportivi")
@@ -50,10 +50,10 @@ public class CentroSportivoController {
 	}
 	
 	@GetMapping("/centri-sportivi/{email}")
-	public EntityModel<CentroSportivo> one(@PathVariable String email) {
+	public ResponseEntity<EntityModel<CentroSportivo>> one(@PathVariable String email) {
 		CentroSportivo centroSportivo = repository.findById(email)
 				.orElseThrow(() -> new NotFoundException(email));
-		return assembler.toModel(centroSportivo);
+		return ResponseEntity.ok(assembler.toModel(centroSportivo));
 	}
 	
 	@PutMapping("centri-sportivi/{email}")

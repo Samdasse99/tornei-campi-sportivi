@@ -10,14 +10,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@JsonIdentityInfo(
-		generator = ObjectIdGenerators.PropertyGenerator.class, 
-		property = "email"
-)
 public class CentroSportivo {
 
 	@Id
@@ -42,6 +37,7 @@ public class CentroSportivo {
 	@Column(precision = 8, scale = 2)
 	private BigDecimal sogliaCoupon;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy = "centroSportivo", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
 	private List<Campo> campi = new ArrayList<Campo>();
 

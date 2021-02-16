@@ -11,23 +11,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Superficie {
 
 	@Id
-	@JsonIdentityInfo(
-			generator = ObjectIdGenerators.PropertyGenerator.class, 
-			property = "idSuperficie"
-	)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idSuperficie;
 	
 	@Column(length = 20, nullable = false)
 	private String materiale;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy = "superficie", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
 	private List<Campo> campi = new ArrayList<Campo>();
 
