@@ -8,5 +8,9 @@ import it.itsrizzoli.ifts2021.springsportshub.model.Campo;
 
 public interface CampoRepository extends JpaRepository<Campo, Integer> {
 
-	List<Campo> findByCentroSportivoId(String email);
+	List<Campo> findByCentroSportivoEmail(String email);
+	
+	List<Campo> findBySportsIdSport(Integer idSport);
+	
+	List<Campo> findBySuperficieIdSuperficie(Integer idSuperficie);
 }

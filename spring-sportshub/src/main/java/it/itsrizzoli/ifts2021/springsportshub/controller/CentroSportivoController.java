@@ -1,14 +1,8 @@
 package it.itsrizzoli.ifts2021.springsportshub.controller;
 
 import java.util.List;
-import java.util.stream.Collectors;
-
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.hateoas.CollectionModel;
-import org.springframework.hateoas.EntityModel;
-import org.springframework.hateoas.IanaLinkRelations;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +12,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import it.itsrizzoli.ifts2021.springsportshub.assembler.CentroSportivoModelAssembler;
 import it.itsrizzoli.ifts2021.springsportshub.exceptions.NotFoundException;
 import it.itsrizzoli.ifts2021.springsportshub.model.CentroSportivo;
 import it.itsrizzoli.ifts2021.springsportshub.repository.CentroSportivoRepository;
@@ -29,31 +22,23 @@ public class CentroSportivoController {
 	@Autowired
 	private CentroSportivoRepository repository;
 	
-	@Autowired
-	private CentroSportivoModelAssembler assembler;
-	
 	@GetMapping("/centri-sportivi")
-	public ResponseEntity<CollectionModel<EntityModel<CentroSportivo>>> all() {
-		List<EntityModel<CentroSportivo>> centriSportivi = repository.findAll().stream()
-				.map(assembler::toModel)
-				.collect(Collectors.toList());
-		return ResponseEntity.ok(CollectionModel.of(centriSportivi,
-				linkTo(methodOn(CentroSportivoController.class).all()).withSelfRel()));
+	public ResponseEntity<List<CentroSportivo>> all() {
+		List<CentroSportivo> centriSportivi = repository.findAll();
+		return ResponseEntity.ok(centriSportivi);
 	}
 	
 	@PostMapping("/centri-sportivi")
 	public ResponseEntity<?> newCentroSportivo(@RequestBody CentroSportivo centroSportivo) {
-		EntityModel<CentroSportivo> entityModel = assembler.toModel(repository.save(centroSportivo));
-		return ResponseEntity
-				.created(entityModel.getRequiredLink(IanaLinkRelations.SELF).toUri())
-				.body(entityModel);
+		CentroSportivo postedCentro = repository.save(centroSportivo);
+		return ResponseEntity.created(null).body(postedCentro);
 	}
 	
 	@GetMapping("/centri-sportivi/{email}")
-	public ResponseEntity<EntityModel<CentroSportivo>> one(@PathVariable String email) {
+	public ResponseEntity<CentroSportivo> one(@PathVariable String email) {
 		CentroSportivo centroSportivo = repository.findById(email)
 				.orElseThrow(() -> new NotFoundException(email));
-		return ResponseEntity.ok(assembler.toModel(centroSportivo));
+		return ResponseEntity.ok(centroSportivo);
 	}
 	
 	@PutMapping("centri-sportivi/{email}")
@@ -73,10 +58,7 @@ public class CentroSportivoController {
 					newCentro.setEmail(email);
 					return repository.save(newCentro);
 				});
-		EntityModel<CentroSportivo> entityModel = assembler.toModel(updatedCentro);
-		return ResponseEntity
-				.created(entityModel.getRequiredLink(IanaLinkRelations.SELF).toUri())
-				.body(entityModel);
+		return ResponseEntity.created(null).body(updatedCentro);
 	}
 
 	@DeleteMapping("centri-sportivi/{email}")

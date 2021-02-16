@@ -1,15 +1,8 @@
 	package it.itsrizzoli.ifts2021.springsportshub.controller;
 
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
-
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.hateoas.CollectionModel;
-import org.springframework.hateoas.EntityModel;
-import org.springframework.hateoas.IanaLinkRelations;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +12,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import it.itsrizzoli.ifts2021.springsportshub.assembler.CampoModelAssembler;
 import it.itsrizzoli.ifts2021.springsportshub.exceptions.NotFoundException;
 import it.itsrizzoli.ifts2021.springsportshub.model.Campo;
 import it.itsrizzoli.ifts2021.springsportshub.repository.CampoRepository;
@@ -29,32 +21,24 @@ public class CampoController {
 
 	@Autowired
 	private CampoRepository repository;
-	
-	@Autowired
-	private CampoModelAssembler assembler;
-	
+		
 	@GetMapping("/campi")
-	public ResponseEntity<CollectionModel<EntityModel<Campo>>> all() {
-		List<EntityModel<Campo>> campi = repository.findAll().stream()
-				.map(assembler::toModel)
-				.collect(Collectors.toList());
-		return ResponseEntity.ok(CollectionModel.of(campi,
-				linkTo(methodOn(CampoController.class).all()).withSelfRel()));
+	public ResponseEntity<List<Campo>> all() {
+		List<Campo> campi = repository.findAll();
+		return ResponseEntity.ok(campi);
 	}
 	
 	@PostMapping("/campi")
 	public ResponseEntity<?> newCampo(@RequestBody Campo campo) {
-		EntityModel<Campo> entityModel = assembler.toModel(repository.save(campo));
-		return ResponseEntity
-				.created(entityModel.getRequiredLink(IanaLinkRelations.SELF).toUri())
-				.body(entityModel);
+		Campo postedCampo = repository.save(campo);
+		return ResponseEntity.created(null).body(postedCampo);
 	}
 
 	@GetMapping("/campi/{idCampo}")
-	public ResponseEntity<EntityModel<Campo>> one(@PathVariable Integer idCampo) {
+	public ResponseEntity<Campo> one(@PathVariable Integer idCampo) {
 		Campo campo = repository.findById(idCampo)
 				.orElseThrow(() -> new NotFoundException(idCampo));
-		return ResponseEntity.ok(assembler.toModel(campo));
+		return ResponseEntity.ok(campo);
 	}
 
 	@PutMapping("campi/{idCampo}")
@@ -73,10 +57,7 @@ public class CampoController {
 					newCampo.setIdCampo(idCampo);;
 					return repository.save(newCampo);
 				});
-		EntityModel<Campo> entityModel = assembler.toModel(updatedCampo);
-		return ResponseEntity
-				.created(entityModel.getRequiredLink(IanaLinkRelations.SELF).toUri())
-				.body(entityModel);
+		return ResponseEntity.created(null).body(updatedCampo);
 	}
 
 	@DeleteMapping("campi/{idCampo}")
@@ -86,11 +67,20 @@ public class CampoController {
 	}
 	
 	@GetMapping("centri-sportivi/{email}/campi")
-	public ResponseEntity<CollectionModel<EntityModel<Campo>>> allInCentro(@PathVariable String email) {
-		List<EntityModel<Campo>> campi = repository.findByCentroSportivoId(email).stream()
-				.map(assembler::toModel)
-				.collect(Collectors.toList());
-		return ResponseEntity.ok(CollectionModel.of(campi,
-				linkTo(methodOn(CampoController.class).allInCentro(email)).withSelfRel()));
+	public ResponseEntity<List<Campo>> allInCentro(@PathVariable String email) {
+		List<Campo> campi = repository.findByCentroSportivoEmail(email);
+		return ResponseEntity.ok(campi);
+	}
+	
+	@GetMapping("sports/{idSport}/campi")
+	public ResponseEntity<List<Campo>> allInSport(@PathVariable Integer idSport) {
+		List<Campo> campi = repository.findBySportsIdSport(idSport);
+		return ResponseEntity.ok(campi);
+	}
+	
+	@GetMapping("superfici/{idSuperficie}/campi")
+	public ResponseEntity<List<Campo>> allInSuperficie(@PathVariable Integer idSuperficie) {
+		List<Campo> campi = repository.findBySuperficieIdSuperficie(idSuperficie);
+		return ResponseEntity.ok(campi);
 	}
 }
