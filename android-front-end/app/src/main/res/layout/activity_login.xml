@@ -7,6 +7,20 @@
     android:orientation="vertical"
     android:gravity="center">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="136dp"
+        android:layout_height="133dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginBottom="566dp"
+        app:srcCompat="@drawable/logo_progetto" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="40dp"
@@ -64,10 +78,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="451dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginBottom="220dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="485dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="186dp"
         android:text="Login" />
 
     <Button
@@ -79,25 +93,12 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="564dp"
-        android:layout_marginEnd="99dp"
-        android:layout_marginBottom="107dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="597dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="74dp"
         android:text="Registrati"
         android:textColor="@color/black" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="136dp"
-        android:layout_height="133dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="141dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="135dp"
-        android:layout_marginBottom="566dp"
-        app:srcCompat="@drawable/logo_progetto" />
 
 </RelativeLayout>
