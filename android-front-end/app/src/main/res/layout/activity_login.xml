@@ -28,10 +28,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="193dp"
-        android:layout_marginEnd="336dp"
-        android:layout_marginBottom="498dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="195dp"
+        android:layout_marginEnd="335dp"
+        android:layout_marginBottom="496dp"
         android:text="Username:" />
 
     <EditText
@@ -42,7 +42,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="475dp"
+        android:layout_marginBottom="458dp"
         android:hint="Inserisci username" />
 
     <TextView
@@ -52,10 +52,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="333dp"
-        android:layout_marginEnd="336dp"
-        android:layout_marginBottom="358dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="343dp"
+        android:layout_marginEnd="334dp"
+        android:layout_marginBottom="348dp"
         android:text="Password:" />
 
     <EditText
@@ -67,7 +67,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="7dp"
-        android:layout_marginBottom="337dp"
+        android:layout_marginBottom="306dp"
         android:hint="Inserisci password" />
 
     <Button
@@ -79,9 +79,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="117dp"
-        android:layout_marginTop="485dp"
+        android:layout_marginTop="519dp"
         android:layout_marginEnd="94dp"
-        android:layout_marginBottom="186dp"
+        android:layout_marginBottom="151dp"
         android:text="Login" />
 
     <Button
@@ -94,9 +94,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="118dp"
-        android:layout_marginTop="597dp"
+        android:layout_marginTop="586dp"
         android:layout_marginEnd="93dp"
-        android:layout_marginBottom="74dp"
+        android:layout_marginBottom="84dp"
         android:text="Registrati"
         android:textColor="@color/black" />
 
