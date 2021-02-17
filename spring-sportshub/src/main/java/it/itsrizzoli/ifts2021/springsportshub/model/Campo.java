@@ -1,5 +1,6 @@
 package it.itsrizzoli.ifts2021.springsportshub.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -12,14 +13,9 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@JsonIdentityInfo(
-		generator = ObjectIdGenerators.PropertyGenerator.class, 
-		property = "idCampo"
-)
 public class Campo {
 
 	@Id
@@ -31,7 +27,7 @@ public class Campo {
 	
 	@Column(nullable = false)
 	private Boolean spogliatoi;
-	
+
 	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
 	private CentroSportivo centroSportivo;
 	
@@ -39,10 +35,21 @@ public class Campo {
 	private Superficie superficie;
 	
 	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-	private List<Sport> sports;
+	private List<Sport> sports = new ArrayList<Sport>();
 	
+	@JsonIgnore
 	@OneToMany(mappedBy = "campo", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-	private List<Slot> slots;
+	private List<Slot> slots = new ArrayList<Slot>();
+	
+	public void addSport(Sport s) {
+		this.sports.add(s);
+		s.getCampi().add(this);
+	}
+	
+	public void removeSport(Sport s) {
+		this.sports.remove(s);
+		s.getCampi().remove(this);
+	}
 
 	public Integer getIdCampo() {
 		return idCampo;
