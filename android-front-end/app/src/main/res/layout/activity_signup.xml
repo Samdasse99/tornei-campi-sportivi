@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:text="Nome:" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/edittext_border"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:hint="Inserisci nome" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:text="Cognome:" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/edittext_border"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:hint="Inserisci cognome" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:text="Indirizzo:" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/edittext_border"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:hint="Inserisci indirizzo" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:text="Paese:" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/edittext_border"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:hint="Inserisci paese" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:text="Username:" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/edittext_border"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:hint="Inserisci username" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:text="Password:" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/edittext_border"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:hint="Inserisci password" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:text="Username:" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/edittext_border"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:hint="Inserisci username" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:text="Password:" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/edittext_border"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:hint="Inserisci password" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:text="Password:" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/edittext_border"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:hint="Inserisci password" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:text="Password:" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/edittext_border"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:hint="Inserisci password" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:layout_span="2"
+            android:text="Registrati" />
+
+    </LinearLayout>
+</ScrollView>

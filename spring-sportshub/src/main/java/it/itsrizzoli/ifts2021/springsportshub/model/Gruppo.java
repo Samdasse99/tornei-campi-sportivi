@@ -1,5 +1,6 @@
 package it.itsrizzoli.ifts2021.springsportshub.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -12,14 +13,9 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@JsonIdentityInfo(
-		generator = ObjectIdGenerators.PropertyGenerator.class, 
-		property = "idGruppo"
-)
 public class Gruppo {
 
 	@Id
@@ -35,9 +31,20 @@ public class Gruppo {
 	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
 	private Giocatore creatore;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy = "gruppo", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-	private List<Slot> slots;
+	private List<Slot> slots = new ArrayList<Slot>();
 
+	public void addGiocatore(Giocatore g) {
+		this.giocatori.add(g);
+		g.getGruppi().add(this);
+	}
+	
+	public void removeGiocatore(Giocatore g) {
+		this.giocatori.remove(g);
+		g.getGruppi().remove(this);
+	}
+	
 	public Integer getIdGruppo() {
 		return idGruppo;
 	}

@@ -1,5 +1,6 @@
 package it.itsrizzoli.ifts2021.springsportshub.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -9,14 +10,9 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@JsonIdentityInfo(
-		generator = ObjectIdGenerators.PropertyGenerator.class, 
-		property = "email"
-)
 public class Giocatore {
 
 	@Id
@@ -41,15 +37,28 @@ public class Giocatore {
 	@Column(length = 40)
 	private String citta;
 	
+	@JsonIgnore
 	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-	private List<Gruppo> gruppi;
+	private List<Gruppo> gruppi = new ArrayList<Gruppo>();
 	
+	@JsonIgnore
 	@OneToMany(mappedBy = "creatore", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-	private List<Gruppo> gruppiCreati;
+	private List<Gruppo> gruppiCreati = new ArrayList<Gruppo>();
 	
+	@JsonIgnore
 	@OneToMany(mappedBy = "referente", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-	private List<Slot> slots;
+	private List<Slot> slots = new ArrayList<Slot>();
 
+	public void addGruppo(Gruppo g) {
+		this.gruppi.add(g);
+		g.getGiocatori().add(this);
+	}
+	
+	public void removeGruppo(Gruppo g) {
+		this.gruppi.remove(g);
+		g.getGiocatori().remove(this);
+	}
+	
 	public String getEmail() {
 		return email;
 	}
