@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.80.0">
-    <title>Dashboard Template � Bootstrap v4.6</title>
+    <title>Dashboard Template � Bootstrap v4.6</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/dashboard/">
 
@@ -18,20 +18,21 @@
 
 
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
+        table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
     </style>
 
 
@@ -40,7 +41,7 @@
 </head>
 <body>
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">SportsHub</a>
+        <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="home.html">SportsHub</a>
         <img src="immagini/logo-progetto.png" style="max-height: 40px" title="Logo" />
         <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -48,10 +49,14 @@
         <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
         <ul class="navbar-nav px-3">
             <li class="nav-item text-nowrap">
-                <a class="nav-link" href="#">Sign out</a>
+                <a class="nav-link" href="LoginProgetto.html">Login</a>
             </li>
         </ul>
     </nav>
+    <center>
+    <img src="logo_progetto.png" alt="logo-progetto"> 
+    </center>
+    <canvas class="my-4 w-100" id="myChart" width="600" height="5"></canvas>
 
     <div class="container-fluid">
         <div class="row">
@@ -133,48 +138,104 @@
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Il tuo gruppo</h1>
+                    <h1 class="h2">Gruppi</h1>
                     <div class="btn-toolbar mb-2 mb-md-0">
                         <div class="btn-group mr-2">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">punteggio più alto</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">età</button>
                         </div>
                         <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                            <span data-feather="calendar"></span>
-                            This week
-                        </button>
+                            <span data-feather="calendar"></span>Questa settimana</button>
                     </div>
                 </div>
                 <div class="table-responsive">
                     <table class="container-fluid">
-                       <h3>Nome gruppo</h3>
+                       <h3>Il tuo gruppo a 11</h3>
+                       <canvas class="my-4 w-100" id="myChart" width="300" height="5"></canvas>
                         <tbody>
                             <tr>
-                                <td>Nome e Cognome</td>
+                                <td>Nome</td>
+                                <td>Cognome</td>
                                 <td>Ruolo</td>
                                 <td>Data di nascita</td>
+                                <td>punteggio</td>
                             </tr>
                             <tr>
-                                <td>Nome e Cognome</td>
+                                <td>Nome</td>
+                                <td>Cognome</td>
                                 <td>Ruolo</td>
                                 <td>Data di nascita</td>
+                                <td>punteggio</td>
+                            </tr>
+                            <tr>
+                                <td>Nome</td>
+                                <td>Cognome</td>
+                                <td>Ruolo</td>
+                                <td>Data di nascita</td>
+                                <td>punteggio</td>
+                            </tr>
+                            <tr>
+                                <td>Nome</td>
+                                <td>Cognome</td>
+                                <td>Ruolo</td>
+                                <td>Data di nascita</td>
+                                <td>punteggio</td>
+                            </tr>
+                            <tr>
+                                <td>Nome</td>
+                                <td>Cognome</td>
+                                <td>Ruolo</td>
+                                <td>Data di nascita</td>
+                                <td>punteggio</td>
+                            </tr>
+                            <tr>
+                                <td>Nome</td>
+                                <td>Cognome</td>
+                                <td>Ruolo</td>
+                                <td>Data di nascita</td>
+                                <td>punteggio</td>
+                            </tr>
+                            <tr>
+                                <td>Nome</td>
+                                <td>Cognome</td>
+                                <td>Ruolo</td>
+                                <td>Data di nascita</td>
+                                <td>punteggio</td>
+                            </tr>
+                            <tr>
+                                <td>Nome</td>
+                                <td>Cognome</td>
+                                <td>Ruolo</td>
+                                <td>Data di nascita</td>
+                                <td>punteggio</td>
+                            </tr>   
+                            <tr>
+                                <td>Nome</td>
+                                <td>Cognome</td>
+                                <td>Ruolo</td>
+                                <td>Data di nascita</td>
+                                <td>punteggio</td>
 
                             </tr>
                             <tr>
-                                <td>Nome e Cognome</td>
-                                <td>Ruolo</td>
+                                <td>Nome</td>
+                                <td>Cognome</td>
+                                <td>Ruolo</td>  
                                 <td>Data di nascita</td>
+                                <td>punteggio</td>
 
                             </tr>
                             <tr>
-                                <td>Nome e Cognome</td>
+                                <td>Nome</td>
+                                <td>Cognome</td>
                                 <td>Ruolo</td>
                                 <td>Data di nascita</td>
-
+                                <td>punteggio</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+                <canvas class="my-4 w-100" id="myChart" width="300" height="50"></canvas>
 
                 <h2>Classifica torneo</h2>
                 <div class="table-responsive">
@@ -191,116 +252,132 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1,001</td>
+                                <td>1</td>
                                 <td>random</td>
-                                <td>data</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
                                 <td>placeholder</td>
-                                <td>text</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
                             </tr>
                             <tr>
-                                <td>1,002</td>
-                                <td>placeholder</td>
-                                <td>irrelevant</td>
-                                <td>visual</td>
-                                <td>layout</td>
-                            </tr>
-                            <tr>
-                                <td>1,003</td>
+                                <td>3</td>
                                 <td>data</td>
-                                <td>rich</td>
-                                <td>dashboard</td>
-                                <td>tabular</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
                             </tr>
                             <tr>
-                                <td>1,003</td>
+                                <td>4</td>
                                 <td>information</td>
-                                <td>placeholder</td>
-                                <td>illustrative</td>
-                                <td>data</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
                             </tr>
                             <tr>
-                                <td>1,004</td>
+                                <td>5</td>
                                 <td>text</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>dashboard</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>dashboard</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>placeholder</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
                                 <td>random</td>
-                                <td>layout</td>
-                                <td>dashboard</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
                             </tr>
                             <tr>
-                                <td>1,005</td>
-                                <td>dashboard</td>
-                                <td>irrelevant</td>
-                                <td>text</td>
+                                <td>10</td>
                                 <td>placeholder</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
                             </tr>
                             <tr>
-                                <td>1,006</td>
-                                <td>dashboard</td>
-                                <td>illustrative</td>
-                                <td>rich</td>
+                                <td>11</td>
                                 <td>data</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
                             </tr>
                             <tr>
-                                <td>1,007</td>
-                                <td>placeholder</td>
-                                <td>tabular</td>
+                                <td>12</td>
                                 <td>information</td>
-                                <td>irrelevant</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
                             </tr>
                             <tr>
-                                <td>1,008</td>
+                                <td>13</td>
+                                <td>text</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>dashboard</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>dashboard</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
                                 <td>random</td>
-                                <td>data</td>
-                                <td>placeholder</td>
-                                <td>text</td>
-                            </tr>
-                            <tr>
-                                <td>1,009</td>
-                                <td>placeholder</td>
-                                <td>irrelevant</td>
-                                <td>visual</td>
-                                <td>layout</td>
-                            </tr>
-                            <tr>
-                                <td>1,010</td>
-                                <td>data</td>
-                                <td>rich</td>
-                                <td>dashboard</td>
-                                <td>tabular</td>
-                            </tr>
-                            <tr>
-                                <td>1,011</td>
-                                <td>information</td>
-                                <td>placeholder</td>
-                                <td>illustrative</td>
-                                <td>data</td>
-                            </tr>
-                            <tr>
-                                <td>1,012</td>
-                                <td>text</td>
-                                <td>placeholder</td>
-                                <td>layout</td>
-                                <td>dashboard</td>
-                            </tr>
-                            <tr>
-                                <td>1,013</td>
-                                <td>dashboard</td>
-                                <td>irrelevant</td>
-                                <td>text</td>
-                                <td>visual</td>
-                            </tr>
-                            <tr>
-                                <td>1,014</td>
-                                <td>dashboard</td>
-                                <td>illustrative</td>
-                                <td>rich</td>
-                                <td>data</td>
-                            </tr>
-                            <tr>
-                                <td>1,015</td>
-                                <td>random</td>
-                                <td>tabular</td>
-                                <td>information</td>
-                                <td>text</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
                             </tr>
                         </tbody>
                     </table>
