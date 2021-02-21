@@ -78,10 +78,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="117dp"
-        android:layout_marginTop="519dp"
-        android:layout_marginEnd="94dp"
-        android:layout_marginBottom="151dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="469dp"
+        android:layout_marginEnd="103dp"
+        android:layout_marginBottom="200dp"
         android:text="Login" />
 
     <Button
@@ -93,10 +93,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="118dp"
-        android:layout_marginTop="586dp"
-        android:layout_marginEnd="93dp"
-        android:layout_marginBottom="84dp"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="565dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="105dp"
         android:text="Registrati"
         android:textColor="@color/black" />
 
