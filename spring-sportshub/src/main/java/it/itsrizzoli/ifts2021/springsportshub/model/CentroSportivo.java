@@ -41,6 +41,19 @@ public class CentroSportivo {
 	@OneToMany(mappedBy = "centroSportivo", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
 	private List<Campo> campi = new ArrayList<Campo>();
 
+	public CentroSportivo(String email, String nomeCentro, String pIva, String numTelefono, String indirizzo,
+			String citta, BigDecimal sogliaCoupon, List<Campo> campi) {
+		super();
+		this.email = email;
+		this.nomeCentro = nomeCentro;
+		this.pIva = pIva;
+		this.numTelefono = numTelefono;
+		this.indirizzo = indirizzo;
+		this.citta = citta;
+		this.sogliaCoupon = sogliaCoupon;
+		this.campi = campi;
+	}
+
 	public String getEmail() {
 		return email;
 	}

@@ -49,6 +49,21 @@ public class Giocatore {
 	@OneToMany(mappedBy = "referente", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
 	private List<Slot> slots = new ArrayList<Slot>();
 
+	public Giocatore(String email, String password, String nome, String cognome, String numeroTelefono,
+			String indirizzo, String citta, List<Gruppo> gruppi, List<Gruppo> gruppiCreati, List<Slot> slots) {
+		super();
+		this.email = email;
+		this.password = password;
+		this.nome = nome;
+		this.cognome = cognome;
+		this.numeroTelefono = numeroTelefono;
+		this.indirizzo = indirizzo;
+		this.citta = citta;
+		this.gruppi = gruppi;
+		this.gruppiCreati = gruppiCreati;
+		this.slots = slots;
+	}
+
 	public void addGruppo(Gruppo g) {
 		this.gruppi.add(g);
 		g.getGiocatori().add(this);
