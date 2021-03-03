@@ -1,0 +1,15 @@
+com/example/sportshub/SignupActivity.java
+ com.example.sportshub.SignupActivity
+com/example/sportshub/SplashActivity.java
+ com.example.sportshub.SplashActivity
+ com.example.sportshub.SplashActivity$1
+com/example/sportshub/LoginActivity.java
+ com.example.sportshub.LoginActivity
+ com.example.sportshub.LoginActivity$1
+ com.example.sportshub.LoginActivity$2
+com/example/sportshub/MainActivity.java
+ com.example.sportshub.MainActivity
+com/example/sportshub/BuildConfig.java
+ com.example.sportshub.BuildConfig
+com/example/sportshub/FiltriActivity.java
+ com.example.sportshub.FiltriActivity
