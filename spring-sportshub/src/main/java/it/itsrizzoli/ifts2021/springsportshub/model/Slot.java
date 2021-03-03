@@ -41,6 +41,19 @@ public class Slot {
 	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
 	private Gruppo gruppo;
 
+	public Slot(Date dataOraInizio, Date dataOraFine, BigDecimal prezzo, Integer scontoPercent,
+			Boolean scontoRiscattato, Campo campo, Giocatore referente, Gruppo gruppo) {
+		super();
+		this.dataOraInizio = dataOraInizio;
+		this.dataOraFine = dataOraFine;
+		this.prezzo = prezzo;
+		this.scontoPercent = scontoPercent;
+		this.scontoRiscattato = scontoRiscattato;
+		this.campo = campo;
+		this.referente = referente;
+		this.gruppo = gruppo;
+	}
+
 	public Integer getIdSlot() {
 		return idSlot;
 	}
