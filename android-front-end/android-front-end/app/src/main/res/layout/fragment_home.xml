@@ -1,73 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
 
+    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/textView12"
-        android:layout_width="112dp"
-        android:layout_height="45dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="295dp"
-        android:layout_marginBottom="667dp"
-        android:text="SportsHub"
-        android:textSize="55px" />
-
-    <SearchView
-        android:layout_width="292dp"
+        android:layout_width="164dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="117dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="667dp"
-        android:iconifiedByDefault="false"
-        android:queryHint="Cerca qui" />
-
-    <ImageButton
-        android:id="@+id/imageButton4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="347dp"
-        android:layout_marginTop="85dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="595dp"
-        app:srcCompat="@android:drawable/ic_menu_add" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="612dp"
-        android:text="Crea Gruppo" />
-
-    <ImageButton
-        android:id="@+id/imageButton5"
-        android:layout_width="108dp"
-        android:layout_height="104dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="261dp"
-        android:layout_marginEnd="42dp"
-        android:layout_marginBottom="474dp"
-        app:srcCompat="@drawable/ic_pay_foreground" />
+        android:layout_marginStart="129dp"
+        android:layout_marginTop="349dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginBottom="363dp"
+        android:text="Benveuto su SportsHub"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
 </RelativeLayout>
