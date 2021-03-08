@@ -1,75 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="200dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/rettang"
     tools:context=".HomeFragment">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginBottom="681dp"
+        android:text="Strutture"
+        android:textSize="35dp">
 
-<LinearLayout
-android:orientation="vertical"
-android:layout_width="match_parent"
-android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
+    </TextView>
+
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="195dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="-1dp"
+        android:layout_marginBottom="496dp"
+        android:src="@drawable/rettangolo2" />
 
-        <TextView
-            android:id="@+id/textStrutture"
-            android:text="Strutture"
-            android:textSize="30sp"
-            android:textColor="#FFFFFF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-        </TextView>
-
-    </RelativeLayout>
-
-    <GridLayout
-        android:columnCount="2"
-        android:rowCount="3"
-        android:alignmentMode="alignMargins"
-        android:columnOrderPreserved="false"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="195dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="332dp"
+        android:src="@drawable/rettangolo2" />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            app:cardElevation="6dp"
-            app:cardCornerRadius="12dp"
-            android:layout_margin="12dp">
-            <LinearLayout
-                android:padding="16dp"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height=""
-                
-            </LinearLayout>
+    <ImageView
+
+        android:layout_width="match_parent"
+        android:layout_height="195dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="442dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="170dp"
+        android:src="@drawable/rettangolo2" />
+
+    <ImageView
+
+        android:layout_width="match_parent"
+        android:layout_height="195dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="608dp"
+        android:layout_marginEnd="-2dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/rettangolo2" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="172dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="558dp"
+        android:src="@drawable/maps" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="390dp"
+        android:src="@drawable/maps" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="503dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="227dp"
+        android:src="@drawable/maps" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="277dp"
+        android:layout_marginTop="666dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="64dp"
+        android:src="@drawable/maps" />
 
 
-
-            </androidx.cardview.widget.CardView>
-
-
-    </GridLayout>
-
-
-</LinearLayout>
-
-
-</ScrollView>
+</RelativeLayout>
 
 
