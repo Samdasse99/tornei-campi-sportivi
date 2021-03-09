@@ -6,10 +6,10 @@ import { RegistrazioneComponent } from './registrazione/registrazione.component'
 import { DatiUtenteComponent } from './dati-utente/dati-utente.component';
 
 const routes: Routes = [
+  {path: '', component: AppComponent},
   {path: 'login', component: LoginComponent},
   {path: 'registrazione', component: RegistrazioneComponent},
   {path: 'dati-utente', component: DatiUtenteComponent},
-  {path: '', component: AppComponent},
 ];
 
 @NgModule({
