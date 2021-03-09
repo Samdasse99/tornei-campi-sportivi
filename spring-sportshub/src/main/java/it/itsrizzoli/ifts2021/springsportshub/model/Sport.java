@@ -27,12 +27,6 @@ public class Sport {
 	@ManyToMany(mappedBy = "sports", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
 	private List<Campo> campi = new ArrayList<Campo>();
 
-	public Sport(String nomeSport, List<Campo> campi) {
-		super();
-		this.nomeSport = nomeSport;
-		this.campi = campi;
-	}
-
 	public void addCampo(Campo c) {
 		this.campi.add(c);
 		c.getSports().add(this);

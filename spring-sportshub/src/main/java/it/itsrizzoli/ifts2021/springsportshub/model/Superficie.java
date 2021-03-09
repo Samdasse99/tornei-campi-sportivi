@@ -27,12 +27,6 @@ public class Superficie {
 	@OneToMany(mappedBy = "superficie", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
 	private List<Campo> campi = new ArrayList<Campo>();
 
-	public Superficie(String materiale, List<Campo> campi) {
-		super();
-		this.materiale = materiale;
-		this.campi = campi;
-	}
-
 	public Integer getIdSuperficie() {
 		return idSuperficie;
 	}
