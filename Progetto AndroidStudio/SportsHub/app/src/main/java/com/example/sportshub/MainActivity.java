@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,8 +21,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 
-        public class MainActivity extends AppCompatActivity {
-
+    public class MainActivity extends AppCompatActivity  {
     BottomNavigationView bottomNavigationView;
     Deque<Integer> integerDeque = new ArrayDeque<>(3);
     boolean flag = true;
@@ -34,7 +34,6 @@ import java.util.Deque;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
 
         Bundle data = getIntent().getExtras();
@@ -77,7 +76,7 @@ import java.util.Deque;
                     }
 
 
-                    
+
                 }
         );
 
@@ -118,4 +117,5 @@ import java.util.Deque;
                     finish();
                 }
         }
+
 }
