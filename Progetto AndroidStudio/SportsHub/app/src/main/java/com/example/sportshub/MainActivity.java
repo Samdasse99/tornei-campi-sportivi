@@ -1,6 +1,6 @@
 
 
-        package com.example.sportshub;
+package com.example.sportshub;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
