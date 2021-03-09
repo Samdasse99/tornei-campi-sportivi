@@ -40,17 +40,6 @@ public class Campo {
 	@JsonIgnore
 	@OneToMany(mappedBy = "campo", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
 	private List<Slot> slots = new ArrayList<Slot>();
-	
-	public Campo(Boolean coperto, Boolean spogliatoi, CentroSportivo centroSportivo, Superficie superficie,
-			List<Sport> sports, List<Slot> slots) {
-		super();
-		this.coperto = coperto;
-		this.spogliatoi = spogliatoi;
-		this.centroSportivo = centroSportivo;
-		this.superficie = superficie;
-		this.sports = sports;
-		this.slots = slots;
-	}
 
 	public void addSport(Sport s) {
 		this.sports.add(s);

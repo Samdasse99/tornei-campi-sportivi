@@ -35,14 +35,6 @@ public class Gruppo {
 	@OneToMany(mappedBy = "gruppo", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
 	private List<Slot> slots = new ArrayList<Slot>();
 
-	public Gruppo(String nomeGruppo, List<Giocatore> giocatori, Giocatore creatore, List<Slot> slots) {
-		super();
-		this.nomeGruppo = nomeGruppo;
-		this.giocatori = giocatori;
-		this.creatore = creatore;
-		this.slots = slots;
-	}
-
 	public void addGiocatore(Giocatore g) {
 		this.giocatori.add(g);
 		g.getGruppi().add(this);
