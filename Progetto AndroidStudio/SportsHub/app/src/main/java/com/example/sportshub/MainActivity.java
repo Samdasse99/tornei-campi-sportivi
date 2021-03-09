@@ -94,6 +94,7 @@ import java.util.Deque;
                     case R.id.bn_notification:
                         bottomNavigationView.getMenu().getItem(2).setChecked(true);
                         return new NotificationFragment();
+
                 }
                 bottomNavigationView.getMenu().getItem(1).setChecked(true);
 
