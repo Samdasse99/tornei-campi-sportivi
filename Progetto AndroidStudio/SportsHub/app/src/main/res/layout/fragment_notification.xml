@@ -52,9 +52,10 @@
             android:layout_below="@+id/tv_name"
             android:layout_centerHorizontal="true"
             android:fontFamily="sans-serif"
-            android:textColor="@color/black"
-            android:text="Milano, Italia"
+            android:layout_marginTop="50sp"
+            android:text="statistiche"
             android:textAllCaps="true"
+            android:textColor="@color/black"
             android:textSize="14sp" />
 
         <ImageView
@@ -64,6 +65,7 @@
             android:layout_marginRight="15dp"
             android:layout_marginTop="15dp"
             android:adjustViewBounds="true"
+            android:src="@drawable/logout"
             android:scaleType="centerInside" />
 
     </RelativeLayout>
@@ -102,7 +104,7 @@
                     android:layout_width="46dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
-                    android:text="Amici"
+                    android:text="punti"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
                     android:textSize="13sp" />
@@ -130,7 +132,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
-                    android:text="30"
+                    android:text="3"
                     android:textColor="@color/black"
                     android:textSize="25sp" />
 
@@ -138,7 +140,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
-                    android:text="following"
+                    android:text="prenotazioni"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
                     android:textSize="13sp" />
