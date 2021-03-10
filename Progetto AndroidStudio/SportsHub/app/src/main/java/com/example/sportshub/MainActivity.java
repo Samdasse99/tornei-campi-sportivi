@@ -1,6 +1,6 @@
 
 
-package com.example.sportshub;
+        package com.example.sportshub;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,9 +8,11 @@ import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +27,7 @@ import java.util.Deque;
     BottomNavigationView bottomNavigationView;
     Deque<Integer> integerDeque = new ArrayDeque<>(3);
     boolean flag = true;
+
 
     public static final String USERNAME_KEY = "USERNAME";
     public static final String PASSWORD_KEY = "PASSWORD";
@@ -74,9 +77,6 @@ import java.util.Deque;
                         loadFragment(getFragment(item.getItemId()));
                         return true;
                     }
-
-
-
                 }
         );
 

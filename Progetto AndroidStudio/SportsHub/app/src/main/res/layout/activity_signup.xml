@@ -16,6 +16,7 @@
             android:text="Nome:" />
 
         <EditText
+            android:id="@+id/EditNome"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/edittext_border"
@@ -28,6 +29,7 @@
             android:text="Cognome:" />
 
         <EditText
+            android:id="@+id/EditCognome"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/edittext_border"
@@ -40,6 +42,7 @@
             android:text="Indirizzo:" />
 
         <EditText
+            android:id="@+id/EditIndirizzo"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/edittext_border"
@@ -52,6 +55,7 @@
             android:text="Paese:" />
 
         <EditText
+            android:id="@+id/EditPaese"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/edittext_border"
@@ -64,6 +68,7 @@
             android:text="Username:" />
 
         <EditText
+            android:id="@+id/EditUsername"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/edittext_border"
@@ -76,6 +81,7 @@
             android:text="Password:" />
 
         <EditText
+            android:id="@+id/EditPassword"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/edittext_border"
@@ -89,6 +95,7 @@
             android:text="Ripeti Password:" />
 
         <EditText
+            android:id="@+id/EditRipassword"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/edittext_border"

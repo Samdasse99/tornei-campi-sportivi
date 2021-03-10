@@ -1,5 +1,6 @@
 package com.example.sportshub;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,10 +10,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+
 public class HomeFragment extends Fragment {
+
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
 
     private String mParam1;
     private String mParam2;
@@ -38,15 +42,27 @@ public class HomeFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+    View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        Button button1 = view.findViewById(R.id.button1);
+        Button button2 = view.findViewById(R.id.button2);
+
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent openStruttura = new Intent(getActivity(),StrutturaActivity.class);
+                startActivity(openStruttura);
+            }
+        });
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        return view;
     }
-
-
-
 }
