@@ -57,13 +57,13 @@ public class HomeFragment extends Fragment {
 
         Button button1 = view.findViewById(R.id.button1);
 
-
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent openStruttura = new Intent(getActivity(), StrutturaActivity.class);
                 startActivity(openStruttura);
             }
+
         });
         // Inflate the layout for this fragment
         return view;
