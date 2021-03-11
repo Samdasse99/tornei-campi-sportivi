@@ -7,10 +7,11 @@
     tools:context=".PagaActivity">
 
     //Questa visualizzazione contiene il layout della carta di credito
+
     <com.braintreepayments.cardform.view.CardForm
         android:id="@+id/card_form"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent" />
     <Button
         android:id="@+id/btnBuy"
         android:layout_width="match_parent"

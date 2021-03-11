@@ -21,7 +21,7 @@ public class PagaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_paga);
 
         cardForm = findViewById(R.id.card_form);
         buy = findViewById(R.id.btnBuy);
@@ -38,6 +38,7 @@ public class PagaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (cardForm.isValid()) {
+                    // Alertdialog un titolo, un messaggio che contiene i dettagli della carta che hai inserito nel layout della carta di credito
                     alertBuilder = new AlertDialog.Builder(PagaActivity.this);
                     alertBuilder.setTitle("Confirm before purchase");
                     alertBuilder.setMessage("Card number: " + cardForm.getCardNumber() + "\n" +

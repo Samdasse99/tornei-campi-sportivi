@@ -56,7 +56,6 @@ public class HomeFragment extends Fragment {
     View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         Button button1 = view.findViewById(R.id.button1);
-        Button button2 = view.findViewById(R.id.button2);
 
 
         button1.setOnClickListener(new View.OnClickListener() {
