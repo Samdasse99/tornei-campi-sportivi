@@ -8,9 +8,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesClearTextTraffic="true"
         android:theme="@style/Theme.Sportshub">
-        <activity android:name=".StrutturaActivity"></activity>
+        <activity android:name=".PagaActivity"></activity>
+        <activity android:name=".StrutturaActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
