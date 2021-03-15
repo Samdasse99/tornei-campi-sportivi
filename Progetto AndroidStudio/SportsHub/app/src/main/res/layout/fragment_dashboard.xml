@@ -1,181 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.DashboardFragment">
-
+    tools:context=".fragment.DashboardFragment"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="539dp"
-        android:layout_marginBottom="141dp"
+        android:layout_marginTop="30dp"
         android:text="Cerca struttura"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="30dp" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView5"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="15dp"
-        android:textSize="20dp"
-        android:text="Nei centri che seguo" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="30dp"
-        android:text="Filtri"
-        android:textSize="25dp" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_below="@id/textView4"
-        android:layout_marginTop="15dp"
-        android:textSize="20dp"
-        android:text="Con posti disponibili" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_below="@id/textView6"
-        android:layout_marginTop="15dp"
-        android:textSize="20dp"
-        android:text="Campo coperto" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_below="@id/textView7"
-        android:layout_marginTop="15dp"
-        android:textSize="20dp"
-        android:text="Con amici iscritti" />
-
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignTop="@id/textView6"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="-46dp" />
-
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="7dp"
-        android:layout_below="@id/checkBox2"/>
-
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="7dp"
-        android:layout_below="@id/checkBox3"/>
-
-    <CheckBox
-        android:id="@+id/checkBox5"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="7dp"
-        android:layout_below="@id/checkBox4"/>
-
-    <CheckBox
-        android:id="@+id/checkBox6"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="7dp"
-        android:layout_below="@id/checkBox5"/>
-
-    <CheckBox
-        android:id="@+id/checkBox7"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_below="@id/checkBox6"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="6dp" />
-
-    <CheckBox
-        android:id="@+id/checkBox8"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginLeft="300dp"
-        android:layout_below="@id/checkBox7"
-        android:layout_marginTop="7dp"/>
-
-    <CheckBox
-        android:id="@+id/checkBox9"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginLeft="300dp"
-        android:layout_below="@id/checkBox8"
-        android:layout_marginTop="7dp"/>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView8"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="15dp"
-        android:textSize="20dp"
-        android:text="Con portieri" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="12dp"
-        android:text="Calcetto"
-        android:textSize="20dp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView2"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="15dp"
-        android:textSize="20dp"
-        android:text="Calcio a 7" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView3"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="15dp"
-        android:textSize="20dp"
-        android:text="Calcio a 11" />
-
-    <SearchView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="97dp" />
+        android:layout_marginStart="10dp"
+        android:text="Che tipo di campo cerchi?:"
+        android:textSize="20dp" />
 
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp">
 
-</RelativeLayout>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="campo a 5" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="campo a 6" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="campo a 7" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="campo a 8" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="campo a 10" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="campo a 11" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Quando vuoi giocare?:"
+        android:textSize="20dp" />
+
+</LinearLayout>
