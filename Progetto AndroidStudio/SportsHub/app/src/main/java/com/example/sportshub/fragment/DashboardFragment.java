@@ -1,5 +1,6 @@
 package com.example.sportshub.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.sportshub.R;
+import com.example.sportshub.RicercaCampoActivity;
+import com.example.sportshub.StrutturaActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,7 +64,19 @@ public class DashboardFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
+
+        Button btn_cerca = view.findViewById(R.id.btn_cerca);
+        btn_cerca.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent openRisultati = new Intent(getActivity(), RicercaCampoActivity.class);
+                startActivity(openRisultati);
+            }
+
+        });
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dashboard, container, false);
+        return view;
     }
 }
