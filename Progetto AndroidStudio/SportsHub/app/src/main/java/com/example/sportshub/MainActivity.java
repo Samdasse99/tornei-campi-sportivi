@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.example.sportshub.fragment.DashboardFragment;
 import com.example.sportshub.fragment.HomeFragment;
 import com.example.sportshub.fragment.NotificationFragment;
+import com.example.sportshub.fragment.PrenotazioniFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayDeque;
@@ -81,15 +82,18 @@ import java.util.Deque;
 
            private Fragment getFragment(int itemId) {
                 switch (itemId) {
-                    case R.id.bn_dashboard:
+                    case R.id.bn_cerca:
                         bottomNavigationView.getMenu().getItem(0).setChecked(true);
                         return new DashboardFragment();
                     case R.id.bn_home:
                         bottomNavigationView.getMenu().getItem(1).setChecked(true);
                         return new HomeFragment();
-                    case R.id.bn_notification:
+                    case R.id.bn_profilo:
                         bottomNavigationView.getMenu().getItem(2).setChecked(true);
                         return new NotificationFragment();
+                    case R.id.bn_prenotazioni:
+                        bottomNavigationView.getMenu().getItem(2).setChecked(true);
+                        return new PrenotazioniFragment();
 
                 }
                 bottomNavigationView.getMenu().getItem(1).setChecked(true);
