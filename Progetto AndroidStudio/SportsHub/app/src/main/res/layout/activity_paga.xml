@@ -7,6 +7,7 @@
     android:background="@drawable/rettang"
     tools:context=".PagaActivity">
 
+
     //Questa visualizzazione contiene il layout della carta di credito
 
     <com.braintreepayments.cardform.view.CardForm
