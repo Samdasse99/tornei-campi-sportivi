@@ -9,6 +9,8 @@ import { RegistrazioneComponent } from './registrazione/registrazione.component'
 import { DatiUtenteComponent } from './dati-utente/dati-utente.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { CambioDatiComponent } from './cambio-dati/cambio-dati.component';
+import { CambioPwdComponent } from './cambio-pwd/cambio-pwd.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     RegistrazioneComponent,
     DatiUtenteComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    CambioDatiComponent,
+    CambioPwdComponent
   ],
   imports: [
     BrowserModule,

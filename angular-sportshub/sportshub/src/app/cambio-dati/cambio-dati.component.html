@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <h3>Modifica i tuoi dati</h3>
+  <form>
+    <div class="form-group">
+      <label>Nome</label>
+      <input type="text" class="form-control" value="{{utenteLoggato.nome}}" #nome>
+    </div>
+    <div class="form-group">
+      <label>Cognome</label>
+      <input type="text" class="form-control" value="{{utenteLoggato.cognome}}" #cognome>
+    </div>
+    <div class="form-group">
+      <label>Telefono</label>
+      <input type="text" class="form-control" value="{{utenteLoggato.numeroTelefono}}" #telefono>
+    </div>
+    <div class="form-group">
+      <label>Indirizzo</label>
+      <input type="text" class="form-control" value="{{utenteLoggato.indirizzo}}" #indirizzo>
+    </div>
+    <div class="form-group">
+      <label>Città</label>
+      <input type="text" class="form-control" value="{{utenteLoggato.citta}}" #citta>
+    </div>
+  </form>
+</div>
+<div class="container" style="max-width: 300px;">
+  <button class="btn btn-outline-dark col-12" (click)="modifica(nome.value, cognome.value, telefono.value, indirizzo.value, citta.value)">Conferma</button>
+</div>

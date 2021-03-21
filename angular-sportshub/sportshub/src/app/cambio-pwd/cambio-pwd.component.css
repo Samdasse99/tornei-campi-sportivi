@@ -1,0 +1,16 @@
+h3 {
+  text-align: center;
+}
+
+.container {
+  padding-top: 40px;
+}
+
+.default {
+  background-color: rgba(255, 0, 0, 0);
+
+}
+
+.wrong {
+  background-color: rgba(255, 0, 0, 0.4);
+}

@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <h3>Cambia password</h3>
+  <form>
+    <div class="form-group">
+      <label>Password attuale</label>
+      <input type="password" class="form-control" [ngClass]="[vecchiaStyle]" #vecchia>
+    </div>
+    <div class="form-group">
+      <label>Nuova password</label>
+      <input type="password" class="form-control" [ngClass]="[nuovaStyle]" #nuova>
+    </div>
+    <div class="form-group">
+      <label>Ripeti nuova password</label>
+      <input type="password" class="form-control" [ngClass]="[nuovaStyle]" #nuova2>
+    </div>
+  </form>
+</div>
+<div class="container" style="max-width: 300px;">
+  <button class="btn btn-outline-dark col-12" (click)="modifica(vecchia.value, nuova.value, nuova2.value)">Conferma</button>
+</div>
