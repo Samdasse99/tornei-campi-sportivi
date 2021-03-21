@@ -11,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Slot {
 
@@ -32,12 +34,14 @@ public class Slot {
 	@Column(nullable = false)
 	private Boolean scontoRiscattato;
 	
+	@JsonIgnore
 	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
 	private Campo campo;
 	
 	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
 	private Giocatore referente;
 	
+	@JsonIgnore
 	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
 	private Gruppo gruppo;
 

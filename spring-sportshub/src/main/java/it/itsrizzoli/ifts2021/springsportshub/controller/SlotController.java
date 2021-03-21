@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import it.itsrizzoli.ifts2021.springsportshub.exceptions.NotFoundException;
-import it.itsrizzoli.ifts2021.springsportshub.model.Campo;
 import it.itsrizzoli.ifts2021.springsportshub.model.Slot;
 import it.itsrizzoli.ifts2021.springsportshub.repository.SlotRepository;
 

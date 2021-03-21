@@ -28,6 +28,7 @@ public class Campo {
 	@Column(nullable = false)
 	private Boolean spogliatoi;
 
+	@JsonIgnore
 	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
 	private CentroSportivo centroSportivo;
 	
