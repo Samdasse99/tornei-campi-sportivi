@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Giocatore } from '../model/giocatore';
+import { SharedUtenteService } from '../shared-utente.service';
 
 @Component({
   selector: 'app-dati-utente',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatiUtenteComponent implements OnInit {
 
-  constructor() { }
+  utenteLoggato: Giocatore;
+
+  constructor(private sharedUtente: SharedUtenteService) {
+    this.utenteLoggato = this.sharedUtente.utenteLoggato;
+  }
 
   ngOnInit(): void {
   }

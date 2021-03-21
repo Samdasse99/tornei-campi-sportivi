@@ -1,0 +1,12 @@
+h3 {
+  text-align: center;
+}
+
+.container {
+  padding-top: 40px;
+}
+
+.list-group-item {
+  text-align: center;
+  font-size: larger;
+}

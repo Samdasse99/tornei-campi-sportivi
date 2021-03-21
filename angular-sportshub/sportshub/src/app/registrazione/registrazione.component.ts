@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Giocatore } from '../model/giocatore';
 
 @Component({
@@ -11,8 +12,8 @@ export class RegistrazioneComponent implements OnInit {
 
   constructor(
     private http: HttpClient,
-    ) {
-  }
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
   }
@@ -28,6 +29,8 @@ export class RegistrazioneComponent implements OnInit {
       giocatore.indirizzo = indirizzo;
       giocatore.citta = citta;
 
-      this.http.post<Giocatore>('http://localhost:8080/api/giocatori', giocatore).subscribe();
+      this.http.post<Giocatore>('http://localhost:8080/api/giocatori', giocatore).subscribe((giocatore) => {
+        this.router.navigate(['']);
+      });
   }
 }

@@ -11,16 +11,19 @@ import { SharedUtenteService } from '../shared-utente.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private http: HttpClient, private sharedUtente: SharedUtenteService) { }
+  constructor(private http: HttpClient,
+    private sharedUtente: SharedUtenteService,
+    private router: Router) { }
 
   ngOnInit(): void {
   }
 
   logga(email: string, password: string) {
-    this.http.get<Giocatore>('http://localhost:8080/api/giocatori/{email}').subscribe((utente) => {
+    this.http.get<Giocatore>('http://localhost:8080/api/giocatori/' + email).subscribe((utente) => {
       if (utente.password == password) {
         this.sharedUtente.utenteLoggato = utente;
       }
+      this.router.navigate(['']);
     });
   }
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
 import { Giocatore } from '../model/giocatore';
 import { SharedUtenteService } from '../shared-utente.service';
 

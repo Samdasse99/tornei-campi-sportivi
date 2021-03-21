@@ -1,1 +1,15 @@
-<p>dati-utente works!</p>
+<app-navbar></app-navbar>
+<div class="container">
+  <h3>I tuoi dati</h3>
+  <ul class="list-group">
+    <li class="list-group-item">Nome: {{utenteLoggato.nome}}</li>
+    <li class="list-group-item">Cognome: {{utenteLoggato.cognome}}</li>
+    <li class="list-group-item">Telefono: {{utenteLoggato.numeroTelefono}}</li>
+    <li class="list-group-item">Indirizzo: {{utenteLoggato.indirizzo}}</li>
+    <li class="list-group-item">Città: {{utenteLoggato.citta}}</li>
+    <li class="list-group-item">email: {{utenteLoggato.email}}</li>
+  </ul>
+</div>
+<div class="container" style="width: 150px">
+  <button class="btn btn-outline-dark">Modifica dati</button>
+</div>
