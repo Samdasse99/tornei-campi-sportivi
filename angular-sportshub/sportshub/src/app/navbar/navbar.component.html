@@ -27,6 +27,8 @@
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
       </li>
     </ul>
-    <button class="btn btn-outline-light my-2 my-sm-0" routerLink="/login">Accedi</button>
+    <button *ngIf="utenteLoggato == null" class="btn btn-outline-light my-2 my-sm-0" routerLink="/login">Accedi</button>
+    <button *ngIf="utenteLoggato == null" class="btn btn-outline-light my-2 my-sm-0" routerLink="/registrazione">Registrati</button>
+    <button *ngIf="utenteLoggato != null" class="btn btn-outline-light my-2 my-sm-0" routerLink="/dati-utente">I tuoi dati</button>
   </div>
 </nav>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SharedUtenteService } from './shared-utente.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sportshub';
+
+  constructor(private sharedUtente: SharedUtenteService) {}
+
 }
+
+
