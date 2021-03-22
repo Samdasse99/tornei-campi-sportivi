@@ -58,16 +58,6 @@
             android:textColor="@color/black"
             android:textSize="14sp" />
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="15dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/logout"
-            android:scaleType="centerInside" />
-
     </RelativeLayout>
 
     <LinearLayout
@@ -113,6 +103,18 @@
 
         </RelativeLayout>
 
+
+        <ImageButton
+            android:id="@+id/exit_bt"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/gruppo" />
+
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -121,6 +123,8 @@
             android:gravity="center"
             android:paddingBottom="5dp"
             android:paddingTop="5dp">
+
+
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -145,6 +149,7 @@
                     android:textColor="@color/black"
                     android:textSize="13sp" />
 
+
             </LinearLayout>
 
         </RelativeLayout>
@@ -156,6 +161,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/linlay1">
+
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -166,7 +166,9 @@ public class SignupActivity extends AppCompatActivity {
                     public void onFailure(Call<Giocatore> call, Throwable t) {
 
                     }
+
                 });
+
             }
         });
 

@@ -26,9 +26,9 @@ public class StrutturaActivity extends AppCompatActivity {
             }
         });
     }
-public void  openPagamenti() {
-    Intent intent = new Intent(this,PagaActivity.class);
-    startActivity(intent);
+            public void  openPagamenti() {
+            Intent intent = new Intent(this,PagaActivity.class);
+            startActivity(intent);
 
 
 
