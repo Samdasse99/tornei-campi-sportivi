@@ -13,7 +13,7 @@
                 <p>Superficie: {{campo.superficie.materiale}}</p>
               </div>
             </div>
-            <button class="btn btn-outline-dark col-12">Consulta disponibilità</button>
+            <button class="btn btn-outline-dark col-12" [routerLink]="['/prenota', campo.idCampo]">Consulta disponibilità</button>
           </div>
         </div>
       </div>

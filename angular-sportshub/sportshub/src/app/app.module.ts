@@ -14,6 +14,8 @@ import { CambioPwdComponent } from './cambio-pwd/cambio-pwd.component';
 import { ListaCentriComponent } from './lista-centri/lista-centri.component';
 import { SportOfCentroComponent } from './sport-of-centro/sport-of-centro.component';
 import { ListaCampiComponent } from './lista-campi/lista-campi.component';
+import { PrenotaComponent } from './prenota/prenota.component';
+import { PrenotazioniComponent } from './prenotazioni/prenotazioni.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { ListaCampiComponent } from './lista-campi/lista-campi.component';
     CambioPwdComponent,
     ListaCentriComponent,
     SportOfCentroComponent,
-    ListaCampiComponent
+    ListaCampiComponent,
+    PrenotaComponent,
+    PrenotazioniComponent
   ],
   imports: [
     BrowserModule,

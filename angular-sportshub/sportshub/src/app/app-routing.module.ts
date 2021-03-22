@@ -8,6 +8,7 @@ import { CambioDatiComponent } from './cambio-dati/cambio-dati.component';
 import { CambioPwdComponent } from './cambio-pwd/cambio-pwd.component';
 import { ListaCentriComponent } from './lista-centri/lista-centri.component';
 import { ListaCampiComponent } from './lista-campi/lista-campi.component';
+import { PrenotaComponent } from './prenota/prenota.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'modifica-dati', component: CambioDatiComponent},
   {path: 'modifica-pwd', component: CambioPwdComponent},
   {path: 'lista-centri', component: ListaCentriComponent},
-  {path: 'lista-campi/:emailCentro', component: ListaCampiComponent}
+  {path: 'lista-campi/:emailCentro', component: ListaCampiComponent},
+  {path: 'prenota/:idCampo', component: PrenotaComponent}
 ];
 
 @NgModule({
