@@ -5,31 +5,37 @@
 </div>
 
 
-<form action="action_page.php">
+
   <div class="container">
     <h1 style="text-align: center;">Registrati</h1>
     <p style="text-align:center;">Compila il modulo per registrarti</p>
 
     <label for="Nome"><b>Nome</b></label>
-    <input type="text" placeholder="Inserisci nome" name="Nome" id="Nome" required>
+    <input type="text" placeholder="Inserisci nome" name="Nome" #nome required>
 
     <label for="Cognome"><b>Cognome</b></label>
-    <input type="text" placeholder="Inserisci Cognome" name="Cognome" id="Cognome" required>
+    <input type="text" placeholder="Inserisci Cognome" name="Cognome" #cognome required>
+
+    <label for="Nome"><b>Numero di telefono</b></label>
+    <input type="text" placeholder="Inserisci numero" name="Telefono" #telefono required>
+
+    <label for="Nome"><b>Indirizzo</b></label>
+    <input type="text" placeholder="Inserisci indirizzo" name="Indirizzo" #indirizzo required>
+
+    <label for="Nome"><b>Città</b></label>
+    <input type="text" placeholder="Inserisci città" name="Citta" #citta required>
 
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Inserisci email" name="email" id="email" required>
+    <input type="text" placeholder="Inserisci email" name="email" #email required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Inserisci password" name="psw" id="psw" required>
+    <input type="password" placeholder="Inserisci password" name="password" #password required>
 
-    <label for="psw-repeat"><b>Ripeti Password</b></label>
-    <input type="password" placeholder="Ripeti password" name="psw-repeat" id="psw-repeat" required>
-
-
-    <button type="submit" class="registerbtn">Registrati</button>
+    <button class="registerbtn"
+     (click)="registra(nome.value, cognome.value, telefono.value, indirizzo.value,
+     citta.value, email.value, password.value)">Registrati</button>
   </div>
 
   <div class="container signin">
-    <p>Hai già un account? <a href="#">Accedi</a>.</p>
+    <p>Hai già un account? <a routerLink="/login">Accedi</a>.</p>
   </div>
-</form>
