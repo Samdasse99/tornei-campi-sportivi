@@ -16,6 +16,7 @@ import { SportOfCentroComponent } from './sport-of-centro/sport-of-centro.compon
 import { ListaCampiComponent } from './lista-campi/lista-campi.component';
 import { PrenotaComponent } from './prenota/prenota.component';
 import { PrenotazioniComponent } from './prenotazioni/prenotazioni.component';
+import { InfoSlotComponent } from './info-slot/info-slot.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { PrenotazioniComponent } from './prenotazioni/prenotazioni.component';
     SportOfCentroComponent,
     ListaCampiComponent,
     PrenotaComponent,
-    PrenotazioniComponent
+    PrenotazioniComponent,
+    InfoSlotComponent
   ],
   imports: [
     BrowserModule,

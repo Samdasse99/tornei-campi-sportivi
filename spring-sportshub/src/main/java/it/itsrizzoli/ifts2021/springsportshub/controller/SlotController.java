@@ -83,7 +83,7 @@ public class SlotController {
 	}
 	
 	@GetMapping("giocatori/{email}/slots")
-	public ResponseEntity<List<Slot>> allInCampo(@PathVariable String email) {
+	public ResponseEntity<List<Slot>> allInGiocatore(@PathVariable String email) {
 		List<Slot> slots = repository.findByReferenteEmail(email);
 		return ResponseEntity.ok(slots);
 	}

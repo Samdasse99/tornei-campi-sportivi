@@ -9,6 +9,7 @@ import { CambioPwdComponent } from './cambio-pwd/cambio-pwd.component';
 import { ListaCentriComponent } from './lista-centri/lista-centri.component';
 import { ListaCampiComponent } from './lista-campi/lista-campi.component';
 import { PrenotaComponent } from './prenota/prenota.component';
+import { PrenotazioniComponent } from './prenotazioni/prenotazioni.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: 'modifica-pwd', component: CambioPwdComponent},
   {path: 'lista-centri', component: ListaCentriComponent},
   {path: 'lista-campi/:emailCentro', component: ListaCampiComponent},
-  {path: 'prenota/:idCampo', component: PrenotaComponent}
+  {path: 'prenota/:idCampo', component: PrenotaComponent},
+  {path: 'prenotazioni', component: PrenotazioniComponent}
 ];
 
 @NgModule({

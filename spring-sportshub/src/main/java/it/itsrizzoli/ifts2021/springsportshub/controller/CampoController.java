@@ -86,4 +86,10 @@ public class CampoController {
 		List<Campo> campi = repository.findBySuperficieIdSuperficie(idSuperficie);
 		return ResponseEntity.ok(campi);
 	}
+	
+	@GetMapping("slots/{idSlot}/campo")
+	public ResponseEntity<Campo> ofSlot(@PathVariable Integer idSlot) {
+		Campo campo = repository.findBySlotsIdSlot(idSlot);
+		return ResponseEntity.ok(campo);
+	}
 }

@@ -68,4 +68,10 @@ public class CentroSportivoController {
 		repository.deleteById(email);
 		return ResponseEntity.noContent().build();
 	}
+	
+	@GetMapping("campi/{idCampo}/centro-sportivo")
+	public ResponseEntity<CentroSportivo> ofCampo(@PathVariable Integer idCampo) {
+		CentroSportivo centro = repository.findByCampiIdCampo(idCampo);
+		return ResponseEntity.ok(centro);
+	}
 }

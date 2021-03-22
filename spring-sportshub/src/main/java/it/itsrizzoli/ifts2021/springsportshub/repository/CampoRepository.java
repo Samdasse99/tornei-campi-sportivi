@@ -13,4 +13,6 @@ public interface CampoRepository extends JpaRepository<Campo, Integer> {
 	List<Campo> findBySportsIdSport(Integer idSport);
 	
 	List<Campo> findBySuperficieIdSuperficie(Integer idSuperficie);
+	
+	Campo findBySlotsIdSlot(Integer idSlot);
 }
