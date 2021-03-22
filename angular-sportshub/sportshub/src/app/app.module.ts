@@ -11,6 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CambioDatiComponent } from './cambio-dati/cambio-dati.component';
 import { CambioPwdComponent } from './cambio-pwd/cambio-pwd.component';
+import { ListaCentriComponent } from './lista-centri/lista-centri.component';
+import { SportOfCentroComponent } from './sport-of-centro/sport-of-centro.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { CambioPwdComponent } from './cambio-pwd/cambio-pwd.component';
     HomeComponent,
     NavbarComponent,
     CambioDatiComponent,
-    CambioPwdComponent
+    CambioPwdComponent,
+    ListaCentriComponent,
+    SportOfCentroComponent
   ],
   imports: [
     BrowserModule,
