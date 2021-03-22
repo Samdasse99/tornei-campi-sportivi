@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import it.itsrizzoli.ifts2021.springsportshub.exceptions.NotFoundException;
-import it.itsrizzoli.ifts2021.springsportshub.model.Campo;
 import it.itsrizzoli.ifts2021.springsportshub.model.Sport;
 import it.itsrizzoli.ifts2021.springsportshub.repository.SportRepository;
 
@@ -61,11 +60,5 @@ public class SportController {
 	public ResponseEntity<?> delete(@PathVariable Integer idSport) {
 		repository.deleteById(idSport);
 		return ResponseEntity.noContent().build();
-	}
-	
-	@GetMapping("/centri-sportivi/{email}/sports")
-	public ResponseEntity<List<Sport>> allInCentro(@PathVariable String email) {
-		List<Sport> sports = repository.findByCampiCentroSportivoEmail(email);
-		return ResponseEntity.ok(sports);
 	}
 }

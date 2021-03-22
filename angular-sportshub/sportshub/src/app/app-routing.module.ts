@@ -6,7 +6,6 @@ import { DatiUtenteComponent } from './dati-utente/dati-utente.component';
 import { HomeComponent } from './home/home.component';
 import { CambioDatiComponent } from './cambio-dati/cambio-dati.component';
 import { CambioPwdComponent } from './cambio-pwd/cambio-pwd.component';
-import { ListaCentriComponent } from './lista-centri/lista-centri.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -14,8 +13,7 @@ const routes: Routes = [
   {path: 'registrazione', component: RegistrazioneComponent},
   {path: 'dati-utente', component: DatiUtenteComponent},
   {path: 'modifica-dati', component: CambioDatiComponent},
-  {path: 'modifica-pwd', component: CambioPwdComponent},
-  {path: 'lista-centri', component: ListaCentriComponent}
+  {path: 'modifica-pwd', component: CambioPwdComponent}
 ];
 
 @NgModule({
