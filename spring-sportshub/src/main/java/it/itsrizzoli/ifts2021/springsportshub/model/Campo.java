@@ -23,6 +23,9 @@ public class Campo {
 	private Integer idCampo;
 	
 	@Column(nullable = false)
+	private String nomeCampo;
+	
+	@Column(nullable = false)
 	private Boolean coperto;
 	
 	@Column(nullable = false)
@@ -58,6 +61,14 @@ public class Campo {
 
 	public void setIdCampo(Integer idCampo) {
 		this.idCampo = idCampo;
+	}
+
+	public String getNomeCampo() {
+		return nomeCampo;
+	}
+
+	public void setNomeCampo(String nomeCampo) {
+		this.nomeCampo = nomeCampo;
 	}
 
 	public Boolean getCoperto() {

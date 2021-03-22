@@ -1,1 +1,22 @@
-<p>lista-campi works!</p>
+<app-navbar></app-navbar>
+<div class="container">
+  <h2 style="text-align: center;">{{centro.nomeCentro}}</h2>
+  <div class="row">
+    <div class="card mb-3 col-md-6" *ngFor="let campo of campi">
+      <div class="row no-gutters">
+        <div class="col-md-12">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12">
+                <h3>{{campo.nomeCampo}}</h3>
+                <p>Sport: <span *ngFor="let sport of campo.sports"> {{sport.nomeSport}} </span></p>
+                <p>Superficie: {{campo.superficie.materiale}}</p>
+              </div>
+            </div>
+            <button class="btn btn-outline-dark col-12">Consulta disponibilità</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

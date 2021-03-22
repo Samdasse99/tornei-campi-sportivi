@@ -1,5 +1,6 @@
 <app-navbar></app-navbar>
-<div class="container" style="max-width: 800px;">
+<div class="container">
+  <h2 style="text-align: center;">Elenco centri sportivi</h2>
   <div class="card mb-3 col-md-12" *ngFor="let centro of centri">
     <div class="row no-gutters">
       <div class="col-md-12">
@@ -16,7 +17,7 @@
               <app-sport-of-centro [inputCentro]="centro"></app-sport-of-centro>
             </div>
           </div>
-          <button class="btn btn-outline-dark col-12" routerLink="/lista-centri">Guarda i campi</button>
+          <button class="btn btn-outline-dark col-12" [routerLink]="['/lista-campi', centro.email]">Guarda i campi</button>
         </div>
       </div>
     </div>

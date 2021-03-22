@@ -49,43 +49,53 @@ GO
 
 INSERT INTO [dbo].[Campo]
            ([coperto]
+           ,[nomeCampo]
            ,[spogliatoi]
            ,[centroSportivo_email]
            ,[superficie_idSuperficie])
      VALUES
            (0
+		   ,'Campo Platini'
            ,1
            ,'centro1@mail.it'
            ,1),
 		   (0
+		   ,'Campo Ronaldo'
            ,1
            ,'centro1@mail.it'
            ,1),
 		   (1
+		   ,'Campo Totti'
            ,1
            ,'centro1@mail.it'
            ,2),
 		   (1
+		   ,'Campo Ronaldinho'
            ,1
            ,'centro1@mail.it'
            ,2),
 		   (1
+		   ,'Campo polivalente'
            ,1
            ,'centro1@mail.it'
            ,3),
 		   (1
+		   ,'Campo ASD futsal'
            ,1
            ,'centro2@mail.it'
            ,3),
 		   (1
+		   ,'Campo Bryant'
            ,1
            ,'centro2@mail.it'
            ,4),
 		   (1
+		   ,'Campo Federer'
            ,1
            ,'centro2@mail.it'
            ,5),
 		   (1
+		   ,'Campo Nadal'
            ,1
            ,'centro2@mail.it'
            ,5)

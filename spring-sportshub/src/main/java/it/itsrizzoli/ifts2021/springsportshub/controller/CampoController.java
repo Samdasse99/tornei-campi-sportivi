@@ -47,6 +47,7 @@ public class CampoController {
 	public ResponseEntity<?> replace(@PathVariable Integer idCampo, @RequestBody Campo newCampo) {
 		Campo updatedCampo = repository.findById(idCampo)
 				.map(campo -> {
+					campo.setNomeCampo(newCampo.getNomeCampo());
 					campo.setCoperto(newCampo.getCoperto());
 					campo.setSpogliatoi(newCampo.getSpogliatoi());
 					campo.setCentroSportivo(newCampo.getCentroSportivo());
@@ -56,7 +57,7 @@ public class CampoController {
 					return repository.save(campo);
 				})
 				.orElseGet(() -> {
-					newCampo.setIdCampo(idCampo);;
+					newCampo.setIdCampo(idCampo);
 					return repository.save(newCampo);
 				});
 		return ResponseEntity.created(null).body(updatedCampo);
